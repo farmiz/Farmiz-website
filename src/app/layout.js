@@ -1,7 +1,30 @@
-import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const cabinet = localFont({
+  src: [
+    {
+      path: './fonts/CabinetGrotesk-Regular.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/CabinetGrotesk-Medium.otf',
+      weight: '400',
+      style: 'italic',
+    },
+    {
+      path: './fonts/CabinetGrotesk-Bold.otf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: './fonts/CabinetGrotesk-ExtraBold.otf',
+      weight: '700',
+      style: 'italic',
+    },
+  ],
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,7 +34,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={cabinet.className}>{children}</body>
     </html>
   )
 }
