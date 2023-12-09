@@ -2,8 +2,13 @@ import Image from 'next/image'
 import logo from '../../public/logo.svg'
 import menu from '../../public/menu.svg'
 import apple from '../../public/apple.svg'
+import play from '../../public/play.svg'
+import holdingFruit from '../../public/holding-fruit.png'
+import holdingPhone from '../../public/holding-phone.png'
+import sitting from '../../public/sitting.png'
 import AppButton from './components/app-button'
 import textClip from '../../public/text-clip.svg'
+
 import Link from 'next/link'
 
 export default function Home() {
@@ -15,10 +20,10 @@ export default function Home() {
             src={logo}
             alt="Picture of the author"
           />
-          <div className="w-[236px] h-[25px] justify-start items-start gap-10 sm:hidden lg:inline-flex">
-            <Link href={'/about'} className="text-white text-[17px] font-medium font-cabinet leading-[25px] tracking-tight">About</Link>
-            <Link href={'/about'} className="text-white text-[17px] font-medium font-cabinet leading-[25px] tracking-tight">Features</Link>
-            <Link href={'/about'} className="text-white text-[17px] font-medium font-cabinet leading-[25px] tracking-tight">FAQs</Link>
+          <div className="w-[236px] h-[25px] justify-start items-start gap-10 hidden lg:inline-flex">
+            <Link href={'/'} className="text-white text-[17px] font-medium font-cabinet leading-[25px] tracking-tight">About</Link>
+            <Link href={'/'} className="text-white text-[17px] font-medium font-cabinet leading-[25px] tracking-tight">Features</Link>
+            <Link href={'/'} className="text-white text-[17px] font-medium font-cabinet leading-[25px] tracking-tight">FAQs</Link>
           </div>
           <div className="w-12 h-12 bg-white bg-opacity-5 rounded-full border border-white border-opacity-20 justify-center items-center gap-7 inline-flex md:hidden">
             <Image
@@ -27,49 +32,50 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className='w-full justify-evenly flex px-[16px] py-4'>
+        <div className='w-full justify-evenly flex px-[16px] pt-[32px]'>
           <div className='flex flex-col py-5 '>
-            <p className="text-white text-[68px] font-extrabold font-cabinet leading-[72px]">Financial succes is <br /> not an occurrence.</p>
+            <strong className="text-white text-4xl font-extrabold font-cabinet leading-[45px]">Financial succes is not an occurrence.</strong>
             <div className="relative">
               <Image
-                width={330}
+                className='w-[223px] h-[55.93px]'
+
                 src={textClip}
                 alt="Picture of the author"
               />
-              <div className="absolute inset-0 top-3 left-2 items-center justify-center">
-                <p className="text-lime-950 text-6xl font-extrabold font-cabinet leading-[48px] tracking-wide">It's a habit.</p>
+              <div className="absolute inset-0 flex left-2 items-center justify-start">
+                <strong className="text-lime-950 text-4xl font-extrabold font-cabinet  tracking-wide">It's a habit.</strong>
               </div>
             </div>
           </div>
-          <div className=" h-[359px] justify-start items-start gap-6 flex">
+          <div className=" h-[359px] justify-start items-start gap-6 lg:flex hidden">
             <img className=" h-[359px] rounded-2xl border border-white border-opacity-20" src="https://via.placeholder.com/302x359" />
             <img className=" h-[250px] rounded-2xl border border-white border-opacity-20" src="https://via.placeholder.com/193x250" />
           </div>
         </div>
 
         <div className='flex justify-evenly flex-row'>
-        <div className="w-[628px] h-[359px] justify-start items-end gap-6 inline-flex">
+          <div className="w-[628px] h-[359px] justify-start items-end gap-6 lg:inline-flex hidden">
             <img className="w-[302px] h-[266px] rounded-2xl border border-white border-opacity-20" src="https://via.placeholder.com/302x266" />
             <img className="w-[302px] h-[359px] rounded-2xl border border-white border-opacity-20" src="https://via.placeholder.com/302x359" />
           </div>
           <div>
-            <div className='w-full items-end justify-end flex px-[16px] py-10'>
-              <p className="md:w-[296px] lg:w-[510px] text-right text-lime-50 text-base font-bold font-cabinet">Farmiz helps you make the best agricultural-related investment decisions and achieve lasting financial success.</p>
+            <div className='mt-[30px] w-full items-end justify-end flex px-[16px]'>
+              <p className="w-[296px] lg:w-[510px] text-right text-lime-50 text-base font-cabinet leading-normal">Farmiz helps you make the best agricultural-related investment decisions and achieve lasting financial success.</p>
             </div>
-            <div className='flex lg:justify-end justify-between py-6 px-[16px]'>
-              <AppButton path={apple} text="Apple App Store"/>
-              <AppButton path={apple} text="Google Play Store" />
+            <div className='flex lg:justify-end justify-between py-6 px-[16px] gap-2'>
+              <AppButton path={apple} text="Apple App Store" />
+              <AppButton path={play} text="Google Play Store" />
             </div>
           </div>
         </div>
 
-        <div className=" md:hidden w-[359] h-[464px] flex-col justify-start items-start gap-4 inline-flex">
+        <div className="mt-[30px] lg:hidden w-[359] h-[464px] flex-col justify-start items-start gap-4 inline-flex">
           <div className="w-[358px] justify-start items-start gap-4 inline-flex">
-            <img className="w-[358px] h-[243px] rounded-[10.81px] border border-white border-opacity-20" src="https://via.placeholder.com/358x243" />
+            <Image className="w-[358px] h-[243px] rounded-[10.81px] border border-white border-opacity-20" src={holdingPhone}/>
           </div>
           <div className="w-[359.16px] justify-start items-end gap-4 inline-flex">
-            <img className="grow shrink basis-0 h-[205px] rounded-[9.12px] border border-white border-opacity-20" src="https://via.placeholder.com/205x205" />
-            <img className="w-[138px] h-[205px] rounded-[9.12px] border border-white border-opacity-20" src="https://via.placeholder.com/138x205" />
+            <Image className="grow shrink basis-0 h-[205px] rounded-[9.12px] border border-white border-opacity-20"  src={holdingFruit} />
+            <Image className="w-[138px] h-[205px] rounded-[9.12px] border border-white border-opacity-20"  src={sitting} />
           </div>
         </div>
       </div>

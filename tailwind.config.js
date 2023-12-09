@@ -14,7 +14,7 @@ module.exports = {
       },
       colors: {
         'custom-lime': '#173400',
-        'custom-dark': '#476222',
+        'custom-dark': '#173401',
         'base-white': '#FFFFFF',
         'base-layer': '#212121',
       },
