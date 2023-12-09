@@ -16,7 +16,7 @@ const cabinet = localFont({
     {
       path: './fonts/CabinetGrotesk-Bold.otf',
       weight: '700',
-      style: 'normal',
+      style: 'bold',
     },
     {
       path: './fonts/CabinetGrotesk-ExtraBold.otf',
