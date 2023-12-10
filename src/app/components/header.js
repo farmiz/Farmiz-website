@@ -33,7 +33,7 @@ const AppHeader = () => {
                     />
                 </div>
             </div>
-            <div className='w-full justify-center items-center lg:justify-between flex lg:px-[80px] px-[16px] pt-[38px] md:pt-[60px]'>
+            <div className='w-full justify-center items-center lg:justify-between flex lg:px-[80px] px-[16px] pt-[25px] md:pt-[60px]'>
                 <div className='flex flex-col py-5 '>
                     <strong className="text-white text-4xl md:w-[600px] md:text-[68px]  font-extrabold font-cabinet leading-[45px] md:leading-[70px]">Financial succes is not an occurrence.</strong>
                     <div className="relative">
