@@ -5,7 +5,10 @@ import apple from '../../public/apple.svg'
 import play from '../../public/play.svg'
 import holdingFruit from '../../public/holding-fruit.png'
 import holdingPhone from '../../public/holding-phone.png'
+import holdingPhoneBig from '../../public/holding-phone-big.png'
+import busket from '../../public/busket.png'
 import sitting from '../../public/sitting.png'
+import sittingBig from '../../public/sitting-big.png'
 import AppButton from './components/app-button'
 import textClip from '../../public/text-clip.svg'
 
@@ -15,7 +18,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between font-cabinet bg-base-white w-full">
       <div className='w-full bg-custom-lime flex items-center justify-between flex-col py-6'>
-        <div className='w-full bg-custom-lime flex items-center justify-between pb-3 px-[16px] border-b-white border-opacity-20 border-b-[1px]'>
+        <div className='w-full bg-custom-lime flex items-center justify-between pb-3 px-[16px] lg:px-[80px] border-b-white border-opacity-20 border-b-[1px]'>
           <Image
             src={logo}
             alt="Picture of the author"
@@ -32,35 +35,35 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className='w-full justify-evenly flex px-[16px] pt-[32px]'>
+        <div className='w-full justify-between flex px-[80px] pt-[60px]'>
           <div className='flex flex-col py-5 '>
-            <strong className="text-white text-4xl font-extrabold font-cabinet leading-[45px]">Financial succes is not an occurrence.</strong>
+            <strong className="text-white text-4xl lg:w-[600px] lg:text-[68px]  font-extrabold font-cabinet leading-[45px] lg:leading-[70px]">Financial succes is not an occurrence.</strong>
             <div className="relative">
               <Image
-                className='w-[223px] h-[55.93px]'
+                className='w-[223px] h-[55.93px] lg:w-[345px] lg:h-[90px]'
 
                 src={textClip}
                 alt="Picture of the author"
               />
               <div className="absolute inset-0 flex left-2 items-center justify-start">
-                <strong className="text-lime-950 text-4xl font-extrabold font-cabinet  tracking-wide">It's a habit.</strong>
+                <strong className="text-lime-950 text-4xl lg:text-6xl font-extrabold font-cabinet  tracking-wide">It's a habit.</strong>
               </div>
             </div>
           </div>
           <div className=" h-[359px] justify-start items-start gap-6 lg:flex hidden">
-            <img className=" h-[359px] rounded-2xl border border-white border-opacity-20" src="https://via.placeholder.com/302x359" />
-            <img className=" h-[250px] rounded-2xl border border-white border-opacity-20" src="https://via.placeholder.com/193x250" />
+            <Image className=" h-[320px] rounded-2xl border border-white border-opacity-20 w-[270px]" src={holdingPhoneBig}/>
+            <Image className=" h-[250px] rounded-2xl border border-white border-opacity-20 w-[193px]" src={busket} />
           </div>
         </div>
 
-        <div className='flex justify-evenly flex-row'>
-          <div className="w-[628px] h-[359px] justify-start items-end gap-6 lg:inline-flex hidden">
-            <img className="w-[302px] h-[266px] rounded-2xl border border-white border-opacity-20" src="https://via.placeholder.com/302x266" />
-            <img className="w-[302px] h-[359px] rounded-2xl border border-white border-opacity-20" src="https://via.placeholder.com/302x359" />
+        <div className='flex justify-between w-full lg:px-[80px] flex-row'>
+          <div className="h-[359px] justify-start items-end gap-6 lg:inline-flex hidden">
+            <Image className="w-[302px] h-[250px] rounded-2xl border border-white border-opacity-20"  src={holdingFruit} />
+            <Image className="w-[270px] h-[320px] rounded-2xl border border-white border-opacity-20 object-cover" src={sittingBig} />
           </div>
           <div>
             <div className='mt-[30px] w-full items-end justify-end flex px-[16px]'>
-              <p className="w-[296px] lg:w-[510px] text-right text-lime-50 text-base font-cabinet leading-normal">Farmiz helps you make the best agricultural-related investment decisions and achieve lasting financial success.</p>
+              <p className="w-[296px] lg:w-[510px] text-right text-lime-50 text-base lg:text-xl font-semibold font-cabinet leading-normal">Farmiz helps you make the best agricultural-related investment decisions and achieve lasting financial success.</p>
             </div>
             <div className='flex lg:justify-end justify-between py-6 px-[16px] gap-2'>
               <AppButton path={apple} text="Apple App Store" />
