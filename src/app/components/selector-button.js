@@ -10,79 +10,49 @@ import compass from '../../../public/selector/compass.svg';
 import activeCompass from '../../../public/selector/active-compass.svg';
 import wallet from '../../../public/selector/wallet.svg';
 import activeWallet from '../../../public/selector/active-wallet.svg';
+import dashboard from '../../../public/dashboard.png';
+import discover from '../../../public/discover.png';
+import walletIcon from '../../../public/wallet.png';
+import porfolioIcon from '../../../public/porfolio.png';
 
 
-import { ReactSVG } from "react-svg";
 
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-}
+const items = [
+    {
+        activeIcon: activeHome,
+        inactiveIcon: home,
+        title: 'DASHBOARD',
+        subtitle: 'View your farmiz balance, portfolio health, and investing action, all from one place.',
+        image: dashboard,
+    },
+
+    {
+        activeIcon: activeCompass,
+        inactiveIcon: compass,
+        title: 'DISCOVER',
+        subtitle: 'Explore ongoing investment opportunities that align to your preferences, values and financial growth.',
+        image: discover,
+
+    },
+    {
+        activeIcon: activeWallet,
+        inactiveIcon: wallet,
+        title: 'WALLET',
+        subtitle: 'Top-up / withdraw from your wallet, and track every transaction activity going on in your account.',
+        image: walletIcon,
+
+    },
+    {
+        activeIcon: activePorfolio,
+        inactiveIcon: porfolio,
+        title: 'PORTFOLIO',
+        subtitle: 'Monitor your portfolio overview and track ongoing or matured investments windows  you have participated in over time.',
+        image: porfolioIcon,
+    },
+];
+
 
 export default function Selector() {
-    const items = [
-        {
-            activeIcon: activeHome,
-            inactiveIcon: home,
-            content: (
-                <div className='border-2 border-blue-400 rounded-lg p-4'>
-                    <h1 className='text-3xl text-blue-600'>Title Test 1</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-                        aperiam asperiores doloribus velit dolore magnam ex consectetur fugit
-                        earum illum qui similique architecto dolorum, minima enim quidem
-                        voluptatibus at nulla deleniti harum! Totam, mollitia quos voluptatem
-                        deleniti provident obcaecati rerum.
-                    </p>
-                </div>
-            ),
-        },
-        {
-            activeIcon: activePorfolio,
-            inactiveIcon: porfolio,
-            content: (
-                <div className='border-2 border-blue-400 rounded-lg p-4'>
-                    <h1 className='text-3xl text-blue-600'>Title Test 2</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-                        aperiam asperiores dolo iti harum! Totam, mollitia quos voluptatem
-                        deleniti provident obcaecati rerum.
-                    </p>
-                </div>
-            ),
-        },
-        {
-            activeIcon: activeCompass,
-            inactiveIcon: compass,
-            content: (
-                <div className='border-2 border-blue-400 rounded-lg p-4'>
-                    <h1 className='text-3xl text-blue-600'>Title Test 3</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-                        aperiam asperiores doloribus velit dolore magnam ex consectetur fugit
-                        earum illum qui similique architecto dolorum, minima enim quidem
-                        voluptatibus at nulla deleniti harum! Totam, mollitia quos voluptatem
-                        deleniti provident obcaecati rerum. amet consectetur adipisicing elit.
-                        Dolores aperiam asperiores doloribus velit dolore magnam ex
-                        consectetur fugit earum illum qui similiq
-                    </p>
-                </div>
-            ),
-        },
-        {
-            activeIcon: activeWallet,
-            inactiveIcon: wallet,
-            content: (
-                <div className='border-2 border-blue-400 rounded-lg p-4'>
-                    <h1 className='text-3xl text-blue-600'>Title Test 4</h1>
-                    <p>
-                        Lorem ipsum dolor sit ue architecto dolorum, minima enim quidem
-                        voluptatibus at nulla deleniti harum! Totam, mollitia quos voluptatem
-                        deleniti provident obcaecati rerum.
-                    </p>
-                </div>
-            ),
-        },
-    ];
 
     const [selectedTab, setSelectedTab] = useState(0);
     const firstBtnRef = useRef();
@@ -109,10 +79,15 @@ export default function Selector() {
                     ))}
                 </div>
 
-                <div className='bg-white p-2 rounded-xl '>
+                <div className='p-2 rounded-xl mt-5'>
                     {items.map((item, index) => (
-                        <div key={index} className={`${selectedTab === index ? '' : 'hidden'}`}>
-                            {item.content}
+                        <div key={index} className={`${selectedTab === index ? '' : 'hidden'} flex flex-col gap-5`}>
+                            {/* {item.content} */}
+                            <div className="w-full flex items-center justify-center gap-10">
+                                <Image src={item.image} alt="Dashboard" className="w-[70%]  object-cover" />
+                            </div>
+                            <div className="text-lime-300 text-lg font-bold font-cabinet leading-normal mt-5">{item.title}</div>
+                            <div className="text-lime-50 text-lg font-bold font-cabinet leading-relaxed">{item.subtitle}</div>
                         </div>
                     ))}
                 </div>
@@ -125,8 +100,6 @@ export default function Selector() {
 
 const SvgSelctor = ({ activeIcon, inActiveIcon, isActive }) => {
     return (
-        <>
-         <Image src={isActive ? activeIcon : inActiveIcon} alt="Selctor Icons" />
-        </>
-    )
+        <Image src={isActive ? activeIcon : inActiveIcon} alt="Selctor Icons" />
+    );
 }

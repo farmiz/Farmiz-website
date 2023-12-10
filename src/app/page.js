@@ -31,11 +31,11 @@ export default function Home() {
           </div>
         </div>
         <Selector />
-        <div className="w-full flex items-center justify-center">
+        {/* <div className="w-full flex items-center justify-center">
           <Image src={dashboard} alt="Dashboard" className="w-[70%]  object-cover" />
         </div>
         <div className="text-lime-300 text-lg font-bold font-cabinet leading-normal">DASHBOARD</div>
-        <div className="text-lime-50 text-lg font-bold font-cabinet leading-relaxed">View your farmiz balance, portfolio health, and investing action, all from one place.</div>
+        <div className="text-lime-50 text-lg font-bold font-cabinet leading-relaxed">View your farmiz balance, portfolio health, and investing action, all from one place.</div> */}
       </div>
     </main>
   );
