@@ -4,7 +4,7 @@ import noise from "../../../public/noise-logo.svg";
 const PortfolioCard = ({ path, heading, subheading, color }) => {
   return (
     <div
-      className={`${color} bg-blend-overlay h-[530px]  rounded-[18px] my-5 relative overflow-hidden `}
+      className={`${color} bg-blend-overlay w-[370px] rounded-[18px] my-5 relative overflow-hidden `}
     >
       <Image
         src={noise}
@@ -21,7 +21,9 @@ const PortfolioCard = ({ path, heading, subheading, color }) => {
           </p>
         </div>
 
-        <Image src={path} alt="Crop" className="ml-auto w-11/12" />
+         <div className="w-full h-[65%] pl-[30px] pt-5">
+         <Image src={path} alt="Crop" className="ml-auto object-scale-down " />
+         </div>
       </div>
     </div>
   );
