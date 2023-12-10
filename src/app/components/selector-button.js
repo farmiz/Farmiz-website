@@ -2,10 +2,16 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import home from '../../../public/home.svg';
-import porfolio from '../../../public/portfolio.svg';
-import track from '../../../public/track.svg';
-import wallet from '../../../public/wallet.svg';
+import home from '../../../public/selector/home.svg';
+import activeHome from '../../../public/selector/active-home.svg';
+import porfolio from '../../../public/selector/portfolio.svg';
+import activePorfolio from '../../../public/selector/active-porfolio.svg';
+import compass from '../../../public/selector/compass.svg';
+import activeCompass from '../../../public/selector/active-compass.svg';
+import wallet from '../../../public/selector/wallet.svg';
+import activeWallet from '../../../public/selector/active-wallet.svg';
+
+
 import { ReactSVG } from "react-svg";
 
 function classNames(...classes) {
@@ -15,7 +21,8 @@ function classNames(...classes) {
 export default function Selector() {
     const items = [
         {
-            title: home,
+            activeIcon: activeHome,
+            inactiveIcon: home,
             content: (
                 <div className='border-2 border-blue-400 rounded-lg p-4'>
                     <h1 className='text-3xl text-blue-600'>Title Test 1</h1>
@@ -30,7 +37,8 @@ export default function Selector() {
             ),
         },
         {
-            title: porfolio,
+            activeIcon: activePorfolio,
+            inactiveIcon: porfolio,
             content: (
                 <div className='border-2 border-blue-400 rounded-lg p-4'>
                     <h1 className='text-3xl text-blue-600'>Title Test 2</h1>
@@ -43,7 +51,8 @@ export default function Selector() {
             ),
         },
         {
-            title: wallet,
+            activeIcon: activeCompass,
+            inactiveIcon: compass,
             content: (
                 <div className='border-2 border-blue-400 rounded-lg p-4'>
                     <h1 className='text-3xl text-blue-600'>Title Test 3</h1>
@@ -60,7 +69,8 @@ export default function Selector() {
             ),
         },
         {
-            title: track,
+            activeIcon: activeWallet,
+            inactiveIcon: wallet,
             content: (
                 <div className='border-2 border-blue-400 rounded-lg p-4'>
                     <h1 className='text-3xl text-blue-600'>Title Test 4</h1>
@@ -93,26 +103,8 @@ export default function Selector() {
                             className={`flex w-14 h-14  p-2  rounded-full text-center focus:ring-2 justify-center items-center ${selectedTab === index ? 'bg-[#A8E06C]' : ''
                                 } `}
                         >
+                            <SvgSelctor activeIcon={item.activeIcon} inActiveIcon={item.inactiveIcon} isActive={selectedTab === index} />
 
-                            {/* <ReactSVG src={`${item.title}`} color='red' fill='red' /> */}
-                            {/* <item.title className='fill-yellow-600'/> */}
-
-                            <ReactSVG src={item.title.src} fill='red' fillRule='nonzero'
-                             afterInjection={(svg) => {
-
-                                selectedTab === index ? svg.setAttribute('style', 'fill: #173400') : svg.setAttribute('style', 'fill: none')
-                                // svg.setAttribute('style', ' fill-opacity: 0.1')
-                                const gElements = svg.getElementsByTagName('g');
-                                if (selectedTab === index) {
-                                    console.log(selectedTab);
-                                    console.log(index)
-                                  // Check if the selectedTab index is within the range
-                                  gElements[selectedTab].setAttribute('opacity', '1');
-                                  console.log(gElements);
-                                }
-                              }}
-                            
-                            />
                         </div>
                     ))}
                 </div>
@@ -128,4 +120,13 @@ export default function Selector() {
         </div>
 
     );
+}
+
+
+const SvgSelctor = ({ activeIcon, inActiveIcon, isActive }) => {
+    return (
+        <>
+         <Image src={isActive ? activeIcon : inActiveIcon} alt="Selctor Icons" />
+        </>
+    )
 }
