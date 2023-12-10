@@ -44,7 +44,7 @@ const AppHeader = () => {
                             alt="Picture of the author"
                         />
                         <div className="absolute inset-0 flex left-2 items-center justify-start">
-                            <strong className="text-lime-950 text-4xl lg:text-6xl font-extrabold font-cabinet  tracking-wide">It's a habit.</strong>
+                            <strong className="text-lime-950 text-4xl lg:text-6xl font-extrabold font-cabinet  tracking-wide">It&apos;s a habit.</strong>
                         </div>
                     </div>
                 </div>
