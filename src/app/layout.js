@@ -9,6 +9,11 @@ const cabinet = localFont({
       style: 'normal',
     },
     {
+      path: './fonts/CabinetGrotesk-Light.otf',
+      weight: '400',
+      style: 'italic',
+    },
+    {
       path: './fonts/CabinetGrotesk-Medium.otf',
       weight: '400',
       style: 'italic',
@@ -19,8 +24,8 @@ const cabinet = localFont({
       style: 'bold',
     },
     {
-      path: './fonts/CabinetGrotesk-ExtraBold.otf',
-      weight: '700',
+      path: './fonts/CabinetGrotesk-Extrabold.otf',
+      weight: '800',
       style: 'italic',
     },
   ],
