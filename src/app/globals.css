@@ -25,3 +25,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.noise {
+  width: 100%;
+  height: 120%;
+  background-image:url("../../public/noise-logo.svg" ), no-repeat;
+}

@@ -26,14 +26,14 @@ const AppHeader = () => {
                     <Link href={'/'} className="text-white text-[17px] font-medium font-cabinet leading-[25px] tracking-tight">Features</Link>
                     <Link href={'/'} className="text-white text-[17px] font-medium font-cabinet leading-[25px] tracking-tight">FAQs</Link>
                 </div>
-                <div className="w-12 h-12 bg-white mx-[10px] bg-opacity-5 rounded-full border border-white border-opacity-20 justify-center items-center gap-7 inline-flex lg:hidden">
+                <div className="w-12 h-12 bg-white bg-opacity-5 rounded-full border border-white border-opacity-20 justify-center items-center gap-7 inline-flex lg:hidden">
                     <Image
                         src={menu}
                         alt="Picture of the author"
                     />
                 </div>
             </div>
-            <div className='w-full justify-center items-center lg:justify-between flex lg:px-[80px] px-[16px] pt-[60px]'>
+            <div className='w-full justify-center items-center lg:justify-between flex lg:px-[80px] px-[16px] pt-[38px] md:pt-[60px]'>
                 <div className='flex flex-col py-5 '>
                     <strong className="text-white text-4xl md:w-[600px] md:text-[68px]  font-extrabold font-cabinet leading-[45px] md:leading-[70px]">Financial succes is not an occurrence.</strong>
                     <div className="relative">
@@ -70,7 +70,7 @@ const AppHeader = () => {
                 </div>
             </div>
 
-            <div className="mt-[30px] pr-[10px] lg:hidden w-[359] h-[464px] flex-col justify-start items-start gap-4 inline-flex">
+            <div className="mt-[30px] lg:hidden w-[359] h-[464px] flex-col justify-start items-start gap-4 inline-flex">
                 <div className="w-[358px] justify-start items-start gap-4 inline-flex">
                     <Image className="w-[358px] h-[243px] rounded-[10.81px] border border-white border-opacity-20" src={holdingPhone} />
                 </div>

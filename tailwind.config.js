@@ -22,6 +22,9 @@ module.exports = {
         cabinet: ["var(--font-cabinet)"],
 
       },
+      backgroundImage: {
+        'noise-pattern': "url('/public/noise-bg.png')",
+      }
     },
   },
   plugins: [],
