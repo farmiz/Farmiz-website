@@ -63,8 +63,8 @@ export default function Selector() {
 
     return (
         <div className=' flex justify-center items-center py-12'>
-            <div className='max-w-md flex flex-col gap-y-2 w-full'>
-                <div className='p-1 rounded-xl flex justify-between items-center gap-x-2 font-bold text-white w-full h-full'>
+            <div className='max-w-md flex flex-col w-full items-center justify-center'>
+                <div className='p-1 rounded-xl flex justify-between items-center gap-x-2 font-bold text-white w-[85%] h-full mb-5'>
                     {items.map((item, index) => (
                         <div
                             ref={index === 0 ? firstBtnRef : null}
