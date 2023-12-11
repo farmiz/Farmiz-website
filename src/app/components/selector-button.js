@@ -62,9 +62,9 @@ export default function Selector() {
     }, []);
 
     return (
-        <div className=' flex justify-center items-center py-12'>
-            <div className='max-w-md flex flex-col w-full items-center justify-center'>
-                <div className='p-1 rounded-xl flex justify-between items-center gap-x-2 font-bold text-white w-[85%] h-full mb-5'>
+        <div className='flex justify-center items-center'>
+            <div className='flex flex-col w-full items-center  lg:flex-row  lg:justify-between  lg:h-[500px] '>
+                <div className='p-1 rounded-xl flex justify-between items-end gap-x-2 font-bold text-white w-[85%] lg:w-[40%] h-[60%] mb-5 lg:flex-col'>
                     {items.map((item, index) => (
                         <div
                             ref={index === 0 ? firstBtnRef : null}
@@ -78,16 +78,27 @@ export default function Selector() {
                         </div>
                     ))}
                 </div>
-
-                <div className='p-2 rounded-xl mt-5'>
+                <div className='p-2  mt-5  w-[100%] h-[100%] flex  justify-center '>
                     {items.map((item, index) => (
-                        <div key={index} className={`${selectedTab === index ? '' : 'hidden'} flex flex-col gap-5`}>
-                            {/* {item.content} */}
+                        <div key={index} className={`${selectedTab === index ? '' : 'hidden'} flex flex-col gap-5 lg:flex-row items-center`}>
                             <div className="w-full flex items-center justify-center gap-10">
-                                <Image src={item.image} alt="Dashboard" className="w-[70%]  object-cover" />
+                                <Image src={item.image} alt="Dashboard" className=" w-[100%] object-cover h-[500px]" />
                             </div>
-                            <div className="text-lime-300 text-lg font-bold font-cabinet leading-normal mt-5">{item.title}</div>
-                            <div className="text-lime-50 text-lg font-bold font-cabinet leading-relaxed">{item.subtitle}</div>
+
+                        </div>
+                    ))}
+                </div>
+
+                <div className='p-2 mt-5  lg:w-[100%] h-[60%]'>
+                    {items.map((item, index) => (
+                        <div key={index} className={`${selectedTab === index ? '' : 'hidden'} flex flex-col gap-5 lg:flex-row w-[250px] items-center h-[60%]`}>
+                            {/* <div className="w-full flex items-center justify-center gap-10">
+                                <Image src={item.image} alt="Dashboard" className="w-[70%]  lg:w-[40%] h-[60%] object-cover" />
+                            </div> */}
+                            <div>
+                                <div className="text-lime-300 text-lg font-bold font-cabinet leading-normal mt-5">{item.title}</div>
+                                <div className="text-lime-50 text-lg font-bold font-cabinet leading-relaxed">{item.subtitle}</div>
+                            </div>
                         </div>
                     ))}
                 </div>
