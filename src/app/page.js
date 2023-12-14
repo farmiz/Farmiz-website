@@ -12,6 +12,11 @@ import lock from "../../public/lock.svg";
 import PromiseCard from "./components/promise-card";
 import AppPromise from "./components/app-promise";
 import OpenCards from "./components/slider";
+import AppFAQ from "./components/app-faq";
+import apple from "../../public/apple.svg";
+import play from "../../public/play.svg";
+import AppButton from "./components/app-button";
+import file from "../../public/file.png";
 
 
 export default function Home() {
@@ -21,13 +26,20 @@ export default function Home() {
       <AppPurpose />
       <AppPreview />
       <AppPromise />
+      <AppFAQ />
+      <div className="bg-custom-lime w-full flex">
+        <div className="flex flex-col">
+        <div className="w-[411px] text-lime-50 text-[32px] font-bold font-cabinet leading-[44px]">Ready to put your<br />funds to work?</div>
+        <div className='flex lg:justify-end justify-between py-6 px-[16px] gap-2'>
+          <AppButton path={apple} text="Apple App Store" />
+          <AppButton path={play} text="Google Play Store" />
 
-      <div className="bg-red-500 py-[16px] w-full flex items-start flex-col">
-        <strong className="text-center mb-5 text-lime-950 text-2xl font-extrabold font-cabinet lg:text-5xl lg:leading-[60px] tracking-wide">
-          Answers to most Asked Questions
-        </strong>
-        <OpenCards />
+        </div>
+        </div>
+        <Image src={file} alt="Picture of the author" width={500} height={500} />
       </div>
+
+
 
     </main>
   );
