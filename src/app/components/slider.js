@@ -71,7 +71,7 @@ const OpenCards = () => {
 
 
   return (
-    <div className=' flex flex-col  w-[80%] relative h-[715px] '>
+    <div className=' flex flex-col w-[80%] relative h-[715px] '>
       {sectionData.map(({ top, background, title, content, border }, index) => (
         <motion.div
           key={index}
