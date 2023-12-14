@@ -27,18 +27,79 @@ export default function Home() {
       <AppPreview />
       <AppPromise />
       <AppFAQ />
-      <div className="bg-custom-lime w-full flex">
-        <div className="flex flex-col">
-        <div className="w-[411px] text-lime-50 text-[32px] font-bold font-cabinet leading-[44px]">Ready to put your<br />funds to work?</div>
-        <div className='flex lg:justify-end justify-between py-6 px-[16px] gap-2'>
-          <AppButton path={apple} text="Apple App Store" />
-          <AppButton path={play} text="Google Play Store" />
 
+
+      <div className="w-[1440px] h-[1024px] relative bg-custom-lime">
+        <div className="left-[599px] top-[160px] absolute justify-start items-start inline-flex">
+          <Image src={file} alt="Picture of the author" height={600} />
         </div>
+        <div className="left-[80px] top-[150px] absolute flex-col justify-start items-start gap-10 inline-flex">
+          <div className="w-[411px] text-lime-50 text-[32px] font-bold font-['Cabinet Grotesk'] leading-[44px]">Ready to put your<br />funds to work?</div>
+          <div className="justify-start items-start gap-6 inline-flex">
+            <AppButton path={apple} text="Apple App Store" />
+            <AppButton path={play} text="Google Play Store" />
+          </div>
         </div>
-        <Image src={file} alt="Picture of the author" width={500} height={500} />
+        <div className="left-[80px] top-[631px] absolute flex-col justify-start items-start gap-6 inline-flex">
+          <div className="text-lime-50 text-[17px] font-medium font-['Cabinet Grotesk'] leading-[25px] tracking-tight">Scan to download mobile app.</div>
+          <div className="h-[183.58px] p-[17.46px] bg-white bg-opacity-5 rounded-2xl border border-white border-opacity-20 flex-col justify-start items-start gap-[6.98px] flex">
+            <div className="w-[168.54px] h-[148.65px] relative" />
+          </div>
+        </div>
       </div>
 
+      {/* End Here the Adss */}
+      <div className="w-[1440px] h-[933px] px-20 pt-16 pb-12 bg-lime-300 flex-col justify-start items-start gap-6 inline-flex">
+        <div className="self-stretch justify-end items-start gap-20 inline-flex">
+          <div className="grow shrink basis-0 h-[255px] justify-end items-start gap-20 flex">
+            <div className="pt-1 flex-col justify-start items-start gap-8 inline-flex">
+              <div className="text-lime-950 text-xl font-bold font-['Cabinet Grotesk'] leading-[30px]">Farmiz</div>
+              <div className="flex-col justify-start items-start gap-4 flex">
+                <div className="text-lime-950 text-[17px] font-medium font-['Cabinet Grotesk'] leading-[25px] tracking-tight">About us</div>
+                <div className="text-lime-950 text-[17px] font-medium font-['Cabinet Grotesk'] leading-[25px] tracking-tight">Features</div>
+                <div className="text-lime-950 text-[17px] font-medium font-['Cabinet Grotesk'] leading-[25px] tracking-tight">Help</div>
+                <div className="text-lime-950 text-[17px] font-medium font-['Cabinet Grotesk'] leading-[25px] tracking-tight">FAQs</div>
+                <div className="text-lime-950 text-[17px] font-medium font-['Cabinet Grotesk'] leading-[25px] tracking-tight">Resources</div>
+              </div>
+            </div>
+            <div className="pt-1 flex-col justify-start items-start gap-8 inline-flex">
+              <div className="text-lime-950 text-xl font-bold font-['Cabinet Grotesk'] leading-[30px]">Legal</div>
+              <div className="flex-col justify-start items-start gap-4 flex">
+                <div className="text-lime-950 text-[17px] font-medium font-['Cabinet Grotesk'] leading-[25px] tracking-tight">License Overview</div>
+                <div className="text-lime-950 text-[17px] font-medium font-['Cabinet Grotesk'] leading-[25px] tracking-tight">Terms and condition</div>
+                <div className="text-lime-950 text-[17px] font-medium font-['Cabinet Grotesk'] leading-[25px] tracking-tight">Privacy</div>
+              </div>
+            </div>
+            <div className="pt-1 flex-col justify-start items-start gap-8 inline-flex">
+              <div className="text-lime-950 text-xl font-bold font-['Cabinet Grotesk'] leading-[30px]">Follow Us</div>
+              <div className="flex-col justify-start items-start gap-4 flex">
+                <div className="text-lime-950 text-[17px] font-medium font-['Cabinet Grotesk'] leading-[25px] tracking-tight">Instagram</div>
+                <div className="text-lime-950 text-[17px] font-medium font-['Cabinet Grotesk'] leading-[25px] tracking-tight">Twitter</div>
+                <div className="text-lime-950 text-[17px] font-medium font-['Cabinet Grotesk'] leading-[25px] tracking-tight">LinkedIn</div>
+                <div className="text-lime-950 text-[17px] font-medium font-['Cabinet Grotesk'] leading-[25px] tracking-tight">Facebook</div>
+              </div>
+            </div>
+            <div className="pt-1 flex-col justify-start items-start gap-8 inline-flex">
+              <div className="text-lime-950 text-xl font-bold font-['Cabinet Grotesk'] leading-[30px]">Get The App</div>
+              <div className="h-12 bg-lime-950 rounded-lg border border-lime-800 border-opacity-20 justify-center items-center inline-flex">
+                <div className="px-4 py-[11px] justify-center items-center gap-4 flex">
+                  <div className="w-6 h-6 relative" />
+                  <div className="w-6 h-[0px] origin-top-left rotate-90 border border-lime-700"></div>
+                  <div className="w-6 h-6 justify-center items-center flex">
+                    <div className="w-6 h-6 relative">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="self-stretch text-center text-lime-950 text-[425px] font-black font-['Cabinet Grotesk'] lowercase leading-[370px]">FARMIZ</div>
+        <div className="self-stretch justify-start items-start gap-2 inline-flex">
+          <div className="grow shrink basis-0 text-neutral-800 text-xl font-medium font-['Cabinet Grotesk'] leading-[30px]">Farmiz is a financial technology company, not a bank. Banking services provided by partner banks, members FDIC.</div>
+          <div><span className="text-lime-950 text-[22px] font-medium font-['Cabinet Grotesk'] leading-[30px]">©</span><span className="text-lime-950 text-xl font-medium font-['Cabinet Grotesk'] leading-[30px]"> 2023 Farmiz HQ</span></div>
+        </div>
+      </div>
 
 
     </main>
