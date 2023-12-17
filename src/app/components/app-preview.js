@@ -1,6 +1,6 @@
 import Image from "next/image";
-import appleFill from '../../../public/apple-fill.svg'
-import playFill from '../../../public/play-fill.svg'
+import appleFill from '../../../public/apple-fill1.svg'
+import playFill from '../../../public/play-fill1.svg'
 import Selector from "./selector-button";
 
 const AppPreview = () => {

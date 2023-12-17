@@ -35,7 +35,8 @@ const AppHeader = () => {
             </div>
             <div className='w-full justify-center items-center lg:justify-between flex lg:px-[80px] px-[16px] pt-[25px] md:pt-[60px]'>
                 <div className='flex flex-col py-5 '>
-                    <strong className="text-white text-4xl md:w-[600px] md:text-[68px]  font-extrabold font-cabinet leading-[45px] md:leading-[70px]">Financial succes is not an occurrence.</strong>
+                    <p className="text-white text-4xl  md:text-[30px]  font-extrabold font-cabinet leading-[45px] md:leading-[40px]">
+                        Financial success is not an occurrence.</p>
                     <div className="relative">
                         <Image
                             className='w-[223px] h-[55.93px] lg:w-[345px] lg:h-[90px]'
@@ -48,7 +49,7 @@ const AppHeader = () => {
                         </div>
                     </div>
                 </div>
-                <div className=" h-[359px] justify-start items-start gap-6 lg:flex hidden">
+                <div className="h-[359px] justify-start items-start gap-6 lg:flex hidden">
                     <Image className=" h-[320px] rounded-2xl border border-white border-opacity-20 w-[270px]" src={holdingPhoneBig} />
                     <Image className=" h-[250px] rounded-2xl border border-white border-opacity-20 w-[193px]" src={busket} />
                 </div>

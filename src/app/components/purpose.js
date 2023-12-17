@@ -2,7 +2,6 @@ import noise from "../../../public/noise-logo.svg";
 import crop from "../../../public/crop.svg";
 import leaf from "../../../public/leaf.svg";
 import farmer from "../../../public/farmer.svg";
-import Image from "next/image";
 import PortfolioCard from "../components/porfolio-card";
 
 const AppPurpose = () => {

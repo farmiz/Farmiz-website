@@ -1,102 +1,98 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const sectionData = [
   {
     top: "0",
-    background: "lime-300",
-    border: "lime-950",
+    background: "bg-[#BEF263]",
+    border: "border-#152108",
     title: "What is Farmiz?",
-    content: "Farmiz is a licensed Financial Institution so your funds are fully safeguarded by law. Your account and operations are protected by 3D-Secure and Strong Customer Authentication technologies.",
+    content:
+      "Farmiz is a licensed Financial Institution so your funds are fully safeguarded by law. Your account and operations are protected by 3D-Secure and Strong Customer Authentication technologies.",
   },
   {
     top: "108px",
-    background: "violet-300",
-    border: "violet-900",
+    background: "bg-[#C4B5FD]",
+    border: "border[#4C1D95]",
     title: "Which country can I invest from?",
-    content: "Farmiz is a licensed Financial Institution so your funds are fully safeguarded by law. Your account and operations are protected by 3D-Secure and Strong Customer Authentication technologies.",
+    content:
+      "Farmiz is a licensed Financial Institution so your funds are fully safeguarded by law. Your account and operations are protected by 3D-Secure and Strong Customer Authentication technologies.",
   },
   {
     top: "216px",
-    background: "rose-300",
-    border: "rose-900",
+    background: "bg-[#FDA4AF]",
+    border: "border-[#881337]",
     title: "How do I invest with Farmiz?",
-    content: "Farmiz is a licensed Financial Institution so your funds are fully safeguarded by law. Your account and operations are protected by 3D-Secure and Strong Customer Authentication technologies.",
+    content:
+      "Farmiz is a licensed Financial Institution so your funds are fully safeguarded by law. Your account and operations are protected by 3D-Secure and Strong Customer Authentication technologies.",
   },
   {
     top: "324px",
-    background: "sky-200",
-    border: "teal-950",
+    background: "bg-[#B0E1E8]",
+    border: "border-[#033239]",
     title: "Why should I use Farmiz?",
-    content: "Farmiz is a licensed Financial Institution so your funds are fully safeguarded by law. Your account and operations are protected by 3D-Secure and Strong Customer Authentication technologies.",
+    content:
+      "Farmiz is a licensed Financial Institution so your funds are fully safeguarded by law. Your account and operations are protected by 3D-Secure and Strong Customer Authentication technologies.",
   },
   {
     top: "432px",
-    background: "yellow-300",
-    border: "lime-950",
+    background: "bg-[#FFDB4D]",
+    border: "border-[#2D2503]",
     title: "Do I need the app to use these features?",
-    content: "Farmiz is a licensed Financial Institution so your funds are fully safeguarded by law. Your account and operations are protected by 3D-Secure and Strong Customer Authentication technologies.",
+    content:
+      "Farmiz is a licensed Financial Institution so your funds are fully safeguarded by law. Your account and operations are protected by 3D-Secure and Strong Customer Authentication technologies.",
   },
 ];
 
-const FeatureSection = ({ top, bgColor, borderColor, title, description, length, index }) => (
-  <div
-    className={`mb-[${Math.max(length, 1)}em] m-[86px]  h-[803px] px-[85px] py-11 top-[${top}] absolute bg-${bgColor} rounded-tl-[40px] rounded-tr-[40px] rounded-bl-2xl rounded-br-2xl border border-${borderColor} border-opacity-20 flex-col justify-start items-start gap-2.5 inline-flex`}
-  >
-    <div key={index} className="h-[120px] flex-col justify-start items-start gap-4 flex">
-      <div className="self-stretch text-lime-950 text-[32px] font-bold font-['Cabinet Grotesk'] leading-[44px]">{title}</div>
-      <div className="self-stretch text-neutral-800 text-xl font-medium font-['Cabinet Grotesk'] leading-[30px]">{description}</div>
-    </div>
-  </div>
-);
-
+const Card = ({ title, content, isOpen, onClick, bg, border }) => {
+  return (
+    <motion.div
+      className={`h-[300px] relative top-[-70] w-full cursor-pointer ${isOpen ? "open" : ""} ${bg} border-red-200 ${border} p-5 rounded-tl-[40px] rounded-tr-[40px]`}
+      onClick={onClick}
+      initial={{ translateY: 0 }}
+      animate={{ translateY: isOpen ? -70 : 0 }}
+      exit={{ translateY: 0 }}
+      transition={{ ease: "easeInOut" }}
+    >
+      <h3 className="self-stretch text-lime-950 text-[32px] font-bold font-['Cabinet Grotesk'] leading-[44px]">
+        {title}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            key="content"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+          >
+            <p className="self-stretch text-neutral-800 text-xl font-medium font-['Cabinet Grotesk'] leading-[30px]">
+              {content}
+            </p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      </h3>
+    </motion.div>
+  );
+};
 
 const OpenCards = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
 
   const handleCardClick = (clickedIndex) => {
-    console.log(clickedIndex);
-    console.log(expandedIndex);
     setExpandedIndex(clickedIndex === expandedIndex ? null : clickedIndex);
   };
-  const cardVariants = {
-    expanded: {
-      transform: 'translateY(-20%)',
-    },
-    collapsed: {
-      transform: 'translateY(0%)',
-    },
-  };
-
-
-
   return (
-    <div className=' flex flex-col w-[80%] relative h-[715px] '>
-      {sectionData.map(({ top, background, title, content, border }, index) => (
-        <motion.div
+    <div className="flex flex-col  m-auto h-[715px] ">
+      {sectionData.map((card, index) => (
+        <Card
           key={index}
-          className={`h-[300px] duration-500 ease-in-out w-full transition cursor-pointer bg-${background} px-10  top-[${top}] ${index === expandedIndex ? 'expanded' : ''} h-[900px] px-[85px] py-11  absolute rounded-tl-[40px] rounded-tr-[40px] border ${border} 0 flex-col justify-start items-start inline-flex`}
-          variants={cardVariants}
-          initial='collapsed'
-          animate={index === expandedIndex ? 'expanded' : 'collapsed'}
-          transition={{ duration: 0.5 }}
+          title={card.title}
+          content={card.content}
+          isOpen={expandedIndex === index}
           onClick={() => handleCardClick(index)}
-        >
-          <div className="flex-col justify-start items-start gap-4 flex">
-            <div className="self-stretch text-lime-950 text-[32px] font-bold font-['Cabinet Grotesk'] leading-[44px]">{title}</div>
-            {
-              expandedIndex === index ? (
-                <div className="self-stretch text-neutral-800 text-xl font-medium font-['Cabinet Grotesk'] leading-[30px]">
-                  {content}
-                </div>
-              ): null
-            } 
-           
-          </div>
-          {/* <div className=" h-[803px] px-[85px] py-11 left-0 top-[108px] absolute bg-violet-300 rounded-tl-[40px] rounded-tr-[40px] rounded-bl-2xl rounded-br-2xl border border-violet-900 border-opacity-20 flex-col justify-start items-start gap-2.5 inline-flex">
-          
-          </div> */}
-        </motion.div>
+          bg={card.background}
+          border={card.border}
+        />
       ))}
     </div>
   );
