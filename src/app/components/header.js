@@ -21,11 +21,20 @@ const AppHeader = () => {
                     src={logo}
                     alt="Picture of the author"
                 />
-                <div className="w-[236px] h-[25px] justify-start items-start gap-10 hidden lg:inline-flex">
-                    <Link href={'/'} className="text-white text-[17px] font-medium font-cabinet leading-[25px] tracking-tight">About</Link>
+                <nav className="w-[236px] h-[25px] justify-start items-start gap-10 hidden lg:inline-flex">
+                    {[
+                        ['Home', '/'],
+                        ['Features', '/'],
+                        ['FAQs', '/'],
+                    ].map(([title, url]) => (
+                        <Link key={title} href={url} className="text-white text-[17px] font-medium font-cabinet leading-[25px] tracking-tight">{title}</Link>
+                    ))}
+                    {/* <Link href={'/'} className="text-white text-[17px] font-medium font-cabinet leading-[25px] tracking-tight">About</Link>
                     <Link href={'/'} className="text-white text-[17px] font-medium font-cabinet leading-[25px] tracking-tight">Features</Link>
-                    <Link href={'/'} className="text-white text-[17px] font-medium font-cabinet leading-[25px] tracking-tight">FAQs</Link>
-                </div>
+                    <Link href={'/'} className="text-white text-[17px] font-medium font-cabinet leading-[25px] tracking-tight">FAQs</Link> */}
+                </nav>
+
+
                 <div className="w-12 h-12 bg-white bg-opacity-5 rounded-full border border-white border-opacity-20 justify-center items-center gap-7 inline-flex lg:hidden">
                     <Image
                         src={menu}
@@ -35,14 +44,14 @@ const AppHeader = () => {
             </div>
             <div className='w-full justify-center items-center lg:justify-between flex lg:px-[80px] px-[16px] pt-[25px] md:pt-[60px]'>
                 <div className='flex flex-col py-5 '>
-                    <p className="text-white text-4xl  md:text-[30px]  font-extrabold font-cabinet leading-[45px] md:leading-[40px]">
+                    <p className="text-white text-4xl md:max-w-[35rem] md:text-[60px] font-extrabold font-cabinet leading-[45px] md:leading-[58px]">
                         Financial success is not an occurrence.</p>
                     <div className="relative">
                         <Image
                             className='w-[223px] h-[55.93px] lg:w-[345px] lg:h-[90px]'
 
                             src={textClip}
-                            alt="Picture of the author"
+                            alt="Text Clip"
                         />
                         <div className="absolute inset-0 flex left-2 items-center justify-start">
                             <strong className="text-lime-950 text-4xl lg:text-6xl font-extrabold font-cabinet  tracking-wide">It&apos;s a habit.</strong>
@@ -50,15 +59,15 @@ const AppHeader = () => {
                     </div>
                 </div>
                 <div className="h-[359px] justify-start items-start gap-6 lg:flex hidden">
-                    <Image className=" h-[320px] rounded-2xl border border-white border-opacity-20 w-[270px]" src={holdingPhoneBig} />
-                    <Image className=" h-[250px] rounded-2xl border border-white border-opacity-20 w-[193px]" src={busket} />
+                    <Image className=" min-h-[320px] rounded-2xl border border-white border-opacity-20 max-w-[270px]" alt='Holding Phone' src={holdingPhoneBig} />
+                    <Image className=" min-h-[250px] rounded-2xl border border-white border-opacity-20 max-w-[193px]" alt='Busket' src={busket} />
                 </div>
             </div>
 
             <div className='flex items-center justify-center lg:justify-between w-full lg:px-[80px] flex-row'>
-                <div className="h-[359px] justify-start items-end gap-6 lg:inline-flex hidden">
-                    <Image className="w-[302px] h-[250px] rounded-2xl border border-white border-opacity-20" src={holdingFruit} />
-                    <Image className="w-[270px] h-[320px] rounded-2xl border border-white border-opacity-20 object-cover" src={sittingBig} />
+                <div className="min-h-[359px] justify-start items-end gap-6 lg:inline-flex hidden">
+                    <Image className="max-w-[302px] min-h-[250px] rounded-2xl border border-white border-opacity-20" src={holdingFruit} />
+                    <Image className="max-w-[270px] min-h-[320px] rounded-2xl border border-white border-opacity-20 object-cover" src={sittingBig} />
                 </div>
                 <div>
                     <div className='mt-[30px] w-full items-end justify-end flex px-[16px]'>
@@ -71,15 +80,25 @@ const AppHeader = () => {
                 </div>
             </div>
 
-            <div className="mt-[30px] lg:hidden w-[359] h-[464px] flex-col justify-start items-start gap-4 inline-flex">
-                <div className="w-[358px] justify-start items-start gap-4 inline-flex">
-                    <Image className="w-[358px] h-[243px] rounded-[10.81px] border border-white border-opacity-20" src={holdingPhone} />
+            <div className="mt-[30px] lg:hidden max-h-[464px] flex-col justify-center w-full items-center gap-4 inline-flex mx-[16px]">
+                <div className="max-w-[358px] justify-start items-start gap-4 inline-flex">
+                    <Image className="max-w-full h-auto rounded-[10.81px] border border-white border-opacity-20" src={holdingPhone} />
                 </div>
-                <div className="w-[359.16px] justify-start items-end gap-4 inline-flex">
+                <div className="max-w-[359px]  justify-start items-end gap-4 inline-flex">
                     <Image className="grow shrink basis-0 h-[205px] rounded-[9.12px] border border-white border-opacity-20" src={holdingFruit} />
-                    <Image className="w-[138px] h-[205px] rounded-[9.12px] border border-white border-opacity-20" src={sitting} />
+                    <Image className="h-[205px] rounded-[9.12px] border border-white border-opacity-20" src={sitting} />
                 </div>
             </div>
+
+            {/* <div className="mt-[30px] lg:hidden max-w-[359px] flex-col justify-start items-start gap-4 inline-flex mx-[16px]">
+                <div className="max-w-[358px] justify-start items-start gap-4 inline-flex">
+                    <Image className="max-w-full h-auto rounded-[10.81px] border border-white border-opacity-20" src={holdingPhone} />
+                </div>
+                <div className="max-w-[359px] justify-start items-end gap-4 inline-flex">
+                    <Image className="flex-grow flex-shrink-0 flex-basis-0 h-auto rounded-[9.12px] border border-white border-opacity-20" src={holdingFruit} />
+                    <Image className="max-w-[138px] h-auto rounded-[9.12px] border border-white border-opacity-20" src={sitting} />
+                </div>
+            </div> */}
         </div>
     );
 };
