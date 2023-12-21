@@ -40,7 +40,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={cabinet.className}>{children}</body>
+      <body className={cabinet.className} suppressHydrationWarning={true}>{children}</body>
     </html>
   )
 }
