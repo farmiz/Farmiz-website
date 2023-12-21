@@ -31,8 +31,8 @@ const AppHeader = () => {
                     </h1>
                     <div class="flex  justify-start items-start w-full h-auto">
                         <svg width="250" viewBox="0 0 383 83" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.67975 78.2719L1.15524 11.9522C1.07001 9.71326 2.84019 7.84098 5.08036 7.80067L377.974 1.09044C380.546 1.04417 382.492 3.40158 381.96 5.9177L368.69 68.6395C368.308 70.4464 366.738 71.7567 364.892 71.81L7.79227 82.1181C5.59838 82.1814 3.76323 80.4651 3.67975 78.2719Z" fill="#A8E06C" stroke="black" stroke-width="0.808717" />
-                            <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" class="text-lime-950 text-6xl lg:text-6xl font-extrabold font-cabinet  tracking-wide" fill="black">It&apos;s a habit.</text>
+                            <path d="M3.67975 78.2719L1.15524 11.9522C1.07001 9.71326 2.84019 7.84098 5.08036 7.80067L377.974 1.09044C380.546 1.04417 382.492 3.40158 381.96 5.9177L368.69 68.6395C368.308 70.4464 366.738 71.7567 364.892 71.81L7.79227 82.1181C5.59838 82.1814 3.76323 80.4651 3.67975 78.2719Z" fill="#A8E06C" stroke="black" strokeWidth="0.808717" />
+                            <text x="50%" y="55%" dominantBaseline="middle" text-anchor="middle" class="text-lime-950 text-6xl lg:text-6xl font-extrabold font-cabinet  tracking-wide" fill="black">It&apos;s a habit.</text>
                         </svg>
                     </div>
                 </div>
@@ -57,11 +57,11 @@ const AppHeader = () => {
                     </div>
                 </div>
             </div>
-            <div className="mt-[20px] lg:hidden  h-auto flex-col justify-center items-center gap-4 flex w-full">
-                <div className="max-w-[358px] justify-start items-start gap-4x">
-                    <img height={243} width="90%"  objectFit='contain' style={{ maxWidth: "358px" }} className="max-w-[358px] h-[243px] rounded-[10.81px] border border-white border-opacity-20" src={holdingPhone.src} />
+            <div className="mt-[20px] lg:hidden  h-auto flex-col justify-center items-center gap-4 flex w-screen">
+                <div className="max-w-[358px] flex justify-center items-start gap-4x">
+                    <img height={243} width="100%"  style={{ maxWidth: "358px" }} className="max-w-[358px] h-[243px] rounded-[10.81px] border border-white border-opacity-20" src={holdingPhone.src} />
                 </div>
-                <div className="grid max-w-[359px] justify-start items-end gap-4 grid-cols-2 w-full">
+                <div className="flex max-w-[359px] justify-center gap-4 item-center  w-full">
                     <img width="100%"  className="grow shrink basis-0 h-[205px] rounded-[9.12px] border border-white border-opacity-20" src={holdingFruit.src} />
                     <img width="100%" className="max-w-[138px] h-[205px] rounded-[9.12px] border border-white border-opacity-20" src={sitting.src} />
                 </div>

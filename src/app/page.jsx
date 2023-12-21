@@ -11,7 +11,8 @@ export default function Home() {
   return (
     <main className="font-cabinet bg-base-white w-full">
       <AppHeader />
-      {/* <AppPurpose />
+      <AppPurpose />
+      {/*
       <AppPreview />
       <AppPromise />
       <AppFAQ />
