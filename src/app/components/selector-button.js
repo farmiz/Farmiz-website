@@ -10,10 +10,10 @@ import compass from '../../../public/selector/compass.svg';
 import activeCompass from '../../../public/selector/active-compass.svg';
 import wallet from '../../../public/selector/wallet.svg';
 import activeWallet from '../../../public/selector/active-wallet.svg';
-import dashboard from '../../../public/dashboard.png';
-import discover from '../../../public/discover.png';
-import walletIcon from '../../../public/wallet.png';
-import porfolioIcon from '../../../public/porfolio.png';
+import dashboard from '../../../public/dashboard.svg';
+import discover from '../../../public/discover.svg';
+import walletIcon from '../../../public/wallet.svg';
+import porfolioIcon from '../../../public/porfolio.svg';
 
 
 
@@ -78,11 +78,11 @@ export default function Selector() {
                         </div>
                     ))}
                 </div>
-                <div className='p-2  mt-5  w-[100%] h-[100%] flex  justify-center '>
+                <div className='p-2  mt-5  w-[100%] h-[100%] flex justify-center '>
                     {items.map((item, index) => (
                         <div key={index} className={`${selectedTab === index ? '' : 'hidden'} flex flex-col gap-5 lg:flex-row items-center`}>
                             <div className="w-full flex items-center justify-center gap-10">
-                                <Image src={item.image} alt="Dashboard" className=" w-[100%] object-cover h-[500px]" />
+                                <Image src={item.image} alt="Dashboard" className=" w-[100%] object-cover]" />
                             </div>
 
                         </div>
