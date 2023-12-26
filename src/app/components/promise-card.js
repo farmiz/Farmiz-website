@@ -6,7 +6,7 @@ import Image from "next/image";
 const PromiseCard = ({image, title, subTitle}) => {
     return (
         <div
-        className={`bg-[#FFE4E6] bg-blend-overlay rounded-[18px] my-5 relative overflow-hidden h-[450px] w-full`}
+        className={`bg-[#FFE4E6] bg-blend-overlay rounded-[18px] my-5 relative overflow-hidden h-[450px] max-w-full`}
     >
         <Image
             src={noise}

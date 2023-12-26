@@ -11,14 +11,17 @@ export default function Home() {
   return (
     <main className="font-cabinet bg-base-white w-full">
       <AppHeader />
-       <AppPurpose />
-       <AppPreview />
-       <AppPromise />
+      <AppPurpose />
+      <AppPreview />
+
+      <AppPromise />
+      <Scan />
+      <Footer /> 
       {/*
       <AppPromise />
       <AppFAQ />
-      <Scan />
-      <Footer /> */}
+
+    */}
     </main>
   );
 }
