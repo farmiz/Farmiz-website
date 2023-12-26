@@ -26,7 +26,7 @@ const AppHeader = () => {
             </div>
             <div className='w-full justify-center items-start lg:justify-between flex lg:px-[80px] px-[16px] pt-[25px] md:pt-[60px]'>
                 <div className='flex flex-col w-full'>
-                    <h1 className="text-white text-4xl md:max-w-[35rem] md:text-[60px] font-bold font-cabinet leading-[45px] md:leading-[58px] md:mt-[20px] ">
+                    <h1 className="text-white text-4xl md:max-w-[35rem] md:text-[60px] font-extrabold font-cabinet leading-[45px] md:leading-[58px] md:mt-[20px] ">
                         Financial success is not an occurrence.
                     </h1>
                     <div className="flex  justify-start items-start w-full h-auto">
@@ -49,7 +49,7 @@ const AppHeader = () => {
                 </div>
                 <div className='w-full'>
                     <div className='mt-[30px] w-full items-end justify-end flex px-[16px]'>
-                        <p className="w-[296px] lg:w-[510px] text-right text-lime-50 text-base lg:text-xl font-semibold font-cabinet leading-normal">Farmiz helps you make the best agricultural-related investment decisions and achieve lasting financial success.</p>
+                        <p className="w-[296px] lg:w-[510px] text-right text-lime-50 text-base lg:text-xl font-medium font-cabinet leading-normal">Farmiz helps you make the best agricultural-related investment decisions and achieve lasting financial success.</p>
                     </div>
                     <div className='flex lg:justify-end justify-evenly py-6 px-[16px] gap-2  w-full'>
                         <AppButton path={apple} text="Apple App Store" />

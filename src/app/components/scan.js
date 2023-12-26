@@ -10,9 +10,9 @@ const Scan = () => {
         <div className="bg-custom-lime w-full lg:h-[1024px] ">
             <div className="h-[90%] scan block lg:flex p-5 lg:p-14   items-center justify-between gap-20">
              
-                <div className="flex flex-col justify-center flex-1 lg:h-[60%] my-10">
+                <div className="flex flex-col justify-center flex-1 lg:h-[70%] my-10">
                     {/* TEXT CONTENT */}
-                    <div className="flex flex-col justify-between h-full w-full items-center lg:items-start text-center lg:text-start">
+                    <div className="flex gap-60 flex-col justify-between h-full w-full items-center lg:items-start text-center lg:text-start">
                         <div className="flex gap-5 flex-col justify-start items-start">
                             <div className="w-[411px] text-lime-50 text-[32px] font-bold  font-cabinet leading-[44px]">
                                 Ready to put your
