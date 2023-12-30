@@ -77,7 +77,7 @@ const Footer = () => {
                 <div className="w-28 h-12 bg-lime-950 rounded-lg border border-lime-800 border-opacity-20  justify-center items-center flex">
                   <div className="flex flex-1 justify-evenly">
                     <Image src={appleFill} alt="leaf" />
-                    <div className="inline-block  min-h-[1em] w-0.5 self-stretch bg-white opacity-100 dark:opacity-50"></div>
+                    <div className="inline-block  min-h-[1em] w-0.5 self-stretch bg-[#4C7B0F] opacity-100 dark:opacity-50"></div>
                     <Image src={playFill} alt="leaf" color="white" />
                   </div>
                 </div>
