@@ -77,6 +77,7 @@ const Footer = () => {
                 <div className="w-28 h-12 bg-lime-950 rounded-lg border border-lime-800 border-opacity-20  justify-center items-center flex">
                   <div className="flex flex-1 justify-evenly">
                     <Image src={appleFill} alt="leaf" />
+                    <div className="inline-block  min-h-[1em] w-0.5 self-stretch bg-white opacity-100 dark:opacity-50"></div>
                     <Image src={playFill} alt="leaf" color="white" />
                   </div>
                 </div>
@@ -86,7 +87,7 @@ const Footer = () => {
           <div className="flex justify-center items-center my-10">
             <svg
               width="1268"
-              height="294"
+              // height="294"
               viewBox="0 0 1268 294"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

@@ -82,7 +82,7 @@ export default function Selector() {
                     {items.map((item, index) => (
                         <div key={index} className={`${selectedTab === index ? '' : 'hidden'} flex flex-col gap-5 lg:flex-row items-center`}>
                             <div className="w-full flex items-center justify-center gap-10">
-                                <Image src={item.image} alt="Dashboard"  height={600} className="lg:h-full"/>
+                                <Image src={item.image} alt="Dashboard"  height={500} className="lg:h-full"/>
                             </div>
 
                         </div>

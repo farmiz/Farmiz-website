@@ -12,8 +12,8 @@ const Scan = () => {
              
                 <div className="flex flex-col justify-center flex-1 lg:h-[70%] my-10">
                     {/* TEXT CONTENT */}
-                    <div className="flex gap-60 flex-col justify-between h-full w-full items-center lg:items-start text-center lg:text-start">
-                        <div className="flex gap-5 flex-col justify-start items-start">
+                    <div className="flex lg:gap-60  gap-24 flex-col justify-between h-full w-full items-center lg:items-start text-center lg:text-start">
+                        <div className="flex gap-5 flex-col lg:justify-start lg:items-start items-center justify-center">
                             <div className="w-[411px] text-lime-50 text-[32px] font-bold  font-cabinet leading-[44px]">
                                 Ready to put your
                                 <br />
