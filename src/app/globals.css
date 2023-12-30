@@ -29,7 +29,7 @@ body {
 .scan {
   /* background: url(/_next/static/media/noise.614780fb.svg), lightgray 0% 0% / 100px 100px repeat, #173400 */
   --tw-bg-opacity: 1;
-  background:   url(/_next/static/media/noise.614780fb.svg), #375123 0% 0% / 100px 100px repeat;
+  background:   url(/noise.svg), #375123 0% 0% / 100px 100px repeat;
   background-blend-mode:color-burn;
 
 }

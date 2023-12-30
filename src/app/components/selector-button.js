@@ -78,18 +78,18 @@ export default function Selector() {
                         </div>
                     ))}
                 </div>
-                <div className='p-2  mt-5  w-[100%] h-[100%] flex justify-center '>
+                <div className='mt-5  w-[100%] h-[100%] flex justify-center '>
                     {items.map((item, index) => (
                         <div key={index} className={`${selectedTab === index ? '' : 'hidden'} flex flex-col gap-5 lg:flex-row items-center`}>
                             <div className="w-full flex items-center justify-center gap-10">
-                                <Image src={item.image} alt="Dashboard" className=" w-[100%] object-cover]" />
+                                <Image src={item.image} alt="Dashboard" className=" w-[18vw] object-cover]" />
                             </div>
 
                         </div>
                     ))}
                 </div>
 
-                <div className='p-2 mt-5  lg:w-[100%] h-[60%]'>
+                <div className='p-2 mt-5 lg:w-[100%] h-[60%]'>
                     {items.map((item, index) => (
                         <div key={index} className={`${selectedTab === index ? '' : 'hidden'} flex flex-col gap-5 lg:flex-row w-[250px] items-center h-[60%]`}>
                             {/* <div className="w-full flex items-center justify-center gap-10">
