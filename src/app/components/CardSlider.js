@@ -1,6 +1,4 @@
 import './CardSlider.modular.scss'
-import { useEffect } from 'react'
-import AppPromise from './app-promise'
 import Scan from './scan'
 const CardSlider = () => {
     return (
