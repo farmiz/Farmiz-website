@@ -6,6 +6,7 @@ import AppPromise from "./components/app-promise";
 import AppFAQ from "./components/app-faq";
 import Footer from "./components/footer";
 import Scan from "./components/scan";
+import CardSlider from "./components/CardSlider";
 
 export default function Home() {
   return (
@@ -13,9 +14,9 @@ export default function Home() {
       <AppHeader />
       <AppPurpose />
       <AppPreview />
-
       <AppPromise />
-      <Scan />
+      <CardSlider/>
+      {/* <Scan /> */}
       <Footer /> 
       {/*
       <AppPromise />
