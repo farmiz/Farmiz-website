@@ -7,7 +7,7 @@ import noise from "../../../public/noise-logo.svg";
 
 const Scan = () => {
     return (
-        <div className="bg-custom-lime w-full lg:h-[1024px] absolute bottom-0">
+        <div className="bg-custom-lime w-full h-[270vw] lg:h-[1024px] absolute bottom-0">
             <div className="h-[90%] scan block lg:flex p-5 lg:p-14 items-center justify-between gap-20">
                 <div className="flex flex-col justify-center flex-1 lg:h-[70%] my-10">
                     {/* TEXT CONTENT */}

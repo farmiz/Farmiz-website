@@ -4,7 +4,10 @@ import AppPromise from './app-promise'
 import Scan from './scan'
 const CardSlider = () => {
     return (
-        <section className='section section-faqs' style={{ height: "2100px", width: "100%" }}>
+        <section className='section section-faqs w-full lg:h-[2100px] h-[500vw]'>
+            <strong className="absolute top-0 mt-5 text-center mb-5 text-lime-950 text-2xl font-extrabold font-cabinet lg:text-5xl lg:leading-[60px] tracking-wide">
+            Answers to most Asked Questions
+            </strong>
             {/* <div className='container'> */}
             <div className="faqs" >
                 <div className="faqs__faq">
