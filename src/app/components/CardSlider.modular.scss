@@ -13,24 +13,11 @@ $radius-large: 5rem;
 $radius-extra-large: 8rem;
 
 // Colors
-$color-offwhite: #fff9f2;
-$color-purple: #6931a1;
-$color-pink: #ffc4c9;
-$color-brown: #5e3030;
-$color-dark-brown: #372121;
-$color-yellow: #ffdd00;
-$color-light-grey: #f2f2f2;
-$color-dark-green: #203a1f;
-$color-black: #202020;
-$color-red: #ff4f59;
-$red-dark: darken($color-red, 5%);
-$red-light: lighten($color-red, 20%);
-$color-green: #21c863;
-$green-dark: darken($color-green, 5%);
-$green-light: lighten($color-green, 50%);
-$color-orange: #fb9129;
-$orange-dark: darken($color-orange, 5%);
-$orange-light: lighten($color-orange, 30%);
+$color-lime: #bef263;
+$color-violet: #c4b5fd;
+$color-rose: #fda4af;
+$color-sky: #b0e1e8;
+$color-yellow: #ffdb4d;
 
 @mixin respond($breakpoint) {
   @if ($breakpoint==mobile-sm) {
@@ -125,7 +112,7 @@ $orange-light: lighten($color-orange, 30%);
     background-color: inherit;
     height: 100%;
     max-height: 92rem;
-    width: var(--width);
+    // width: var(--width);
     top: 0;
     left: calc((var(--width) / -2) + 50%);
     clip-path: ellipse(50% 14% at 50% 15%);
@@ -154,12 +141,11 @@ $orange-light: lighten($color-orange, 30%);
 }
 
 .faqs {
-  $faq-colors: $color-pink, $color-purple, $color-green, $color-brown,
-    $color-purple, $color-green;
+  $faq-colors: $color-lime, $color-violet, $color-rose, $color-sky,
+    $color-yellow, $color-lime;
   // position: relative;
   // margin: 13rem 0 -10rem;
   width: 100%;
-  color: red;
 
   @include respond("mobile") {
     // margin: 7rem 0 -6rem;
@@ -171,12 +157,11 @@ $orange-light: lighten($color-orange, 30%);
     left: 10%;
     right: 10%;
     width: 80%;
-    color: white;
-    padding: 4.5rem 10rem 30rem;
+    color: black;
+    padding: 4rem 10rem 30rem;
     margin-top: 10vw;
-    border-top-left-radius: $radius-large;
-    border-top-right-radius: $radius-large;
-    box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.25);
+    border-radius: 40px 40px 16px 16px;
+    // box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.25);
     transition: 0.73s $ease-out-expo;
 
     // @include respond("tablet-lg") {
@@ -201,7 +186,9 @@ $orange-light: lighten($color-orange, 30%);
     }
 
     .h5 {
-      font-weight: normal;
+      font-family: Cabinet Grotesk;
+      font-style: normal;
+      font-weight: 500;
 
       @include respond("mobile") {
         font-size: 1.6rem;
@@ -256,7 +243,7 @@ $orange-light: lighten($color-orange, 30%);
   $increment: 100; // Set the increment value
   @for $i from 2 through 5 {
     & ~ .faqs__faq:nth-child(#{$i}) {
-      $translateY: 106px + ($increment * ($i - 1));
+      $translateY: 160px + ($increment * ($i - 1));
       transform: translate(0px, #{$translateY}) !important;
     }
   }
