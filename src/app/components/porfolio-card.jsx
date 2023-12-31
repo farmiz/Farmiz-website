@@ -4,7 +4,7 @@ import noise from "../../../public/noise-logo.svg";
 const PortfolioCard = ({ path, heading, subheading, color }) => {
   return (
     <div
-      className={`${color} bg-blend-overlay w-[370px] rounded-[18px] my-5 relative overflow-hidden `}
+      className={`${color} bg-blend-overlay max-w-[370px] rounded-[18px] my-5 relative overflow-hidden `}
     >
       <Image
         src={noise}

@@ -5,10 +5,10 @@ import Selector from "./selector-button";
 
 const AppPreview = () => {
     return (
-        <div className="bg-slate-800 w-full px-[16px] gap-5 flex flex-col py-10 lg:py-[50px] lg:px-[80px]">
-            <div className="w-[358px] lg:w-[842px]"><span className="text-white text-2xl font-extrabold font-cabinet lg:text-5xl">Investing in a<br /></span><span className="text-lime-300 text-2xl font-extrabold font-cabine lg:text-5xl">sustainable</span><span className="text-white text-2xl font-extrabold font-cabinet lg:text-5xl"> future</span></div>
-            <div className="w-full flex justify-end">
-                <p className="self-stretch lg:w-[400px] text-right text-lime-50 text-sm font-medium font-cabinet leading-tight">Farmiz helps you make the best agricultural-related investment decisions and achieve lasting financial success.</p>
+        <div className="bg-[#1F363D] px-[16px] flex flex-col py-10 lg:py-[50px] lg:px-[80px]">
+            <div className=""><span className="text-white text-2xl font-extrabold font-cabinet lg:text-5xl">Investing in a<br /></span><span className="text-lime-300 max-w-2xl text-2xl font-extrabold font-cabine lg:text-5xl">sustainable</span><span className="text-white text-2xl font-extrabold font-cabinet lg:text-5xl"> future</span></div>
+            <div className="flex justify-end pb-4">
+                <p className="lg:w-[400px] text-right text-lime-50 text-[16px] font-medium font-cabinet ">Farmiz helps you make the best agricultural-related investment decisions and achieve lasting financial success.</p>
             </div>
             <div className="w-full flex items-center justify-end">
                 <div className="w-28 h-12 bg-lime-50 rounded-lg border border-white border-opacity-20 justify-center items-center inline-flex">

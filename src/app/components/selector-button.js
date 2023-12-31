@@ -10,10 +10,10 @@ import compass from '../../../public/selector/compass.svg';
 import activeCompass from '../../../public/selector/active-compass.svg';
 import wallet from '../../../public/selector/wallet.svg';
 import activeWallet from '../../../public/selector/active-wallet.svg';
-import dashboard from '../../../public/dashboard.png';
-import discover from '../../../public/discover.png';
-import walletIcon from '../../../public/wallet.png';
-import porfolioIcon from '../../../public/porfolio.png';
+import dashboard from '../../../public/dashboard.svg';
+import discover from '../../../public/discover.svg';
+import walletIcon from '../../../public/wallet.svg';
+import porfolioIcon from '../../../public/porfolio.svg';
 
 
 
@@ -64,7 +64,7 @@ export default function Selector() {
     return (
         <div className='flex justify-center items-center'>
             <div className='flex flex-col w-full items-center  lg:flex-row  lg:justify-between  lg:h-[500px] '>
-                <div className='p-1 rounded-xl flex justify-between items-end gap-x-2 font-bold text-white w-[85%] lg:w-[40%] h-[60%] mb-5 lg:flex-col'>
+                <div className='lg:p-1 pt-12 rounded-xl flex justify-between items-end gap-x-2 font-bold text-white w-[85%] lg:w-[40%] h-[60%] mb-5 lg:flex-col'>
                     {items.map((item, index) => (
                         <div
                             ref={index === 0 ? firstBtnRef : null}
@@ -78,18 +78,18 @@ export default function Selector() {
                         </div>
                     ))}
                 </div>
-                <div className='p-2  mt-5  w-[100%] h-[100%] flex  justify-center '>
+                <div className='mt-5  w-[100%] h-[100%] flex justify-center '>
                     {items.map((item, index) => (
                         <div key={index} className={`${selectedTab === index ? '' : 'hidden'} flex flex-col gap-5 lg:flex-row items-center`}>
                             <div className="w-full flex items-center justify-center gap-10">
-                                <Image src={item.image} alt="Dashboard" className=" w-[100%] object-cover h-[500px]" />
+                                <Image src={item.image} alt="Dashboard"  height={500} className="lg:h-full"/>
                             </div>
 
                         </div>
                     ))}
                 </div>
 
-                <div className='p-2 mt-5  lg:w-[100%] h-[60%]'>
+                <div className='p-2 mt-5 lg:w-[100%] h-[60%]'>
                     {items.map((item, index) => (
                         <div key={index} className={`${selectedTab === index ? '' : 'hidden'} flex flex-col gap-5 lg:flex-row w-[250px] items-center h-[60%]`}>
                             {/* <div className="w-full flex items-center justify-center gap-10">

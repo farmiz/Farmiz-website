@@ -22,8 +22,12 @@ module.exports = {
         cabinet: ["var(--font-cabinet)"],
 
       },
+      fontSize: {
+        headerClamp: "clamp(1rem, 4vw, 3rem)",
+        textClip: "clamp(1rem, 5.5vw, 2rem)",
+      },
       backgroundImage: {
-        'noise-pattern': "url('/public/noise-bg.png')",
+        'clip': "url('/public/text-clip.svg')",
       }
     },
   },

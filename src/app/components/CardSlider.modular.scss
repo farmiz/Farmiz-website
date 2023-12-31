@@ -1,0 +1,293 @@
+// Dimensions
+$container-width: 120rem;
+$container-width-lg: 168rem;
+$container-width-sm: 96rem;
+
+// Easings
+$ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+//Border radius
+$radius-default: 2rem;
+$radius-small: 1.2rem;
+$radius-large: 5rem;
+$radius-extra-large: 8rem;
+
+// Colors
+$color-lime: #bef263;
+$color-violet: #c4b5fd;
+$color-rose: #fda4af;
+$color-sky: #b0e1e8;
+$color-yellow: #ffdb4d;
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint==mobile-sm) {
+    @media only screen and (max-width: 31.25em) {
+      @content;
+    }
+
+    // 500px
+  }
+
+  @if ($breakpoint==mobile) {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+
+    // 600px
+  }
+
+  @if ($breakpoint==tablet) {
+    @media only screen and (max-width: 46.875em) {
+      @content;
+    }
+
+    // 750px
+  }
+
+  @if ($breakpoint==tablet-lg) {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+
+    // 900px
+  }
+
+  @if ($breakpoint==desktop) {
+    @media only screen and (max-width: 62.5em) {
+      @content;
+    }
+
+    // 1000px
+  }
+
+  @if ($breakpoint==desktop-lg) {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+}
+
+// @include respond(desktop) {}
+// @include respond(tablet-lg) {}
+// @include respond(tablet) {}
+// @include respond(mobile) {}
+// @include respond(mobile-sm) {}
+
+@mixin container {
+  margin: 0 auto;
+  max-width: $container-width;
+}
+
+@mixin container-lg {
+  margin: 0 auto;
+  max-width: $container-width-lg;
+}
+
+@mixin container-sm {
+  margin: 0 auto;
+  max-width: $container-width-sm;
+}
+//2100px
+// 500vw
+
+.section {
+  position: relative;
+  // padding: 22rem 2rem 40rem;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+
+  // @include respond("desktop") {
+  //   padding: 16rem 2rem 32rem;
+  // }
+
+  // @include respond("tablet") {
+  //   padding: 10rem 2rem 24rem;
+  // }
+
+  // @include respond("mobile") {
+  //   padding: 5rem 2rem 20rem;
+  // }
+
+  &::before {
+    --width: 110vw;
+    content: "";
+    position: absolute;
+    background-color: inherit;
+    height: 100%;
+    max-height: 92rem;
+    // width: var(--width);
+    top: 0;
+    left: calc((var(--width) / -2) + 50%);
+    clip-path: ellipse(50% 14% at 50% 15%);
+    transform: translateY(-9.5%);
+    z-index: 2;
+
+    @include respond("desktop") {
+      --width: 120vw;
+    }
+
+    @include respond("tablet") {
+      --width: 140vw;
+    }
+
+    @include respond("mobile") {
+      --width: 165vw;
+    }
+  }
+
+  // > * {
+  //   @include respond("mobile") {
+  //     position: relative;
+  //     z-index: 1;
+  //   }
+  // }
+}
+
+.faqs {
+  $faq-colors: $color-lime, $color-violet, $color-rose, $color-sky,
+    $color-yellow, $color-lime;
+  // position: relative;
+  // margin: 13rem 0 -10rem;
+  width: 90%;
+
+  &__faq {
+    --marginTop: 10vw;
+    position: absolute;
+    top: 0;
+    right: 10;
+    width: 90%;
+    color: black;
+    padding: 4rem 10rem 30rem;
+    margin-top: var(--marginTop);
+    border-radius: 40px 40px 16px 16px;
+    // box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.25);
+    transition: 0.73s $ease-out-expo;
+
+    // @include respond("tablet-lg") {
+    //   margin-top: 22rem;
+    // }
+
+    @include respond("tablet") {
+      margin-top: 5rem;
+    }
+
+    @include respond("desktop") {
+      --marginTop: 10px;
+      padding: 4rem 3rem 30rem;
+      border-top-left-radius: 24px;
+      border-top-right-radius: 24px;
+    }
+
+    @include respond("mobile") {
+      marginTop: 10px;
+      border-top-left-radius: 24px;
+      border-top-right-radius: 24px;
+   
+    }
+
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        background-color: nth($faq-colors, $i);
+
+        @if $i == 1 or $i ==3 or $i == 6 {
+          color: black;
+        }
+      }
+    }
+
+    .h5 {
+      font-family: Cabinet Grotesk;
+      font-style: normal;
+      font-weight: 500;
+
+      @include respond("mobile") {
+        font-size: 1.6rem;
+      }
+    }
+
+    .p {
+      margin-top: 3rem;
+
+      @include respond("mobile") {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+      }
+    }
+
+    &-subheading {
+      display: block;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__support-link {
+    display: inline-block;
+    text-decoration: underline;
+    color: inherit;
+    margin-top: 10rem;
+
+    @include respond("mobile") {
+      margin-top: 3rem;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.container {
+  @include container;
+
+  &.lg {
+    @include container-lg;
+  }
+
+  &.sm {
+    @include container-sm;
+  }
+}
+
+.faqs__faq {
+  transition: transform 0.3s ease; 
+}
+
+.faqs__faq:nth-child(1):hover {
+  $increment: 100;
+  @for $i from 2 through 5 {
+    & ~ .faqs__faq:nth-child(#{$i}) {
+      $translateY: 160px + ($increment * ($i - 1));
+      transform: translate(0px, #{$translateY}) !important;
+    }
+  }
+}
+
+.faqs__faq:nth-child(2):hover {
+  $increment: 100;
+  @for $i from 3 through 5 {
+    & ~ .faqs__faq:nth-child(#{$i}) {
+      $translateY: 200px + ($increment * ($i - 1));
+      transform: translate(0px, #{$translateY}) !important;
+    }
+  }
+}
+
+.faqs__faq:nth-child(3):hover {
+  $increment: 100;
+  @for $i from 4 through 5 {
+    & ~ .faqs__faq:nth-child(#{$i}) {
+      $translateY: 200px + ($increment * ($i - 1));
+      transform: translate(0px, #{$translateY}) !important;
+    }
+  }
+}
+
+.faqs__faq:nth-child(4):hover {
+  $increment: 100; 
+  @for $i from 5 through 5 {
+    & ~ .faqs__faq:nth-child(#{$i}) {
+      $translateY: 200px + ($increment * ($i - 1));
+      transform: translate(0px, #{$translateY}) !important;
+    }
+  }
+}
