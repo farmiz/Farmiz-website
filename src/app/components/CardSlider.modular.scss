@@ -1,0 +1,293 @@
+// Dimensions
+$container-width: 120rem;
+$container-width-lg: 168rem;
+$container-width-sm: 96rem;
+
+// Easings
+$ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+//Border radius
+$radius-default: 2rem;
+$radius-small: 1.2rem;
+$radius-large: 5rem;
+$radius-extra-large: 8rem;
+
+// Colors
+$color-offwhite: #fff9f2;
+$color-purple: #6931a1;
+$color-pink: #ffc4c9;
+$color-brown: #5e3030;
+$color-dark-brown: #372121;
+$color-yellow: #ffdd00;
+$color-light-grey: #f2f2f2;
+$color-dark-green: #203a1f;
+$color-black: #202020;
+$color-red: #ff4f59;
+$red-dark: darken($color-red, 5%);
+$red-light: lighten($color-red, 20%);
+$color-green: #21c863;
+$green-dark: darken($color-green, 5%);
+$green-light: lighten($color-green, 50%);
+$color-orange: #fb9129;
+$orange-dark: darken($color-orange, 5%);
+$orange-light: lighten($color-orange, 30%);
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint==mobile-sm) {
+    @media only screen and (max-width: 31.25em) {
+      @content;
+    }
+
+    // 500px
+  }
+
+  @if ($breakpoint==mobile) {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+
+    // 600px
+  }
+
+  @if ($breakpoint==tablet) {
+    @media only screen and (max-width: 46.875em) {
+      @content;
+    }
+
+    // 750px
+  }
+
+  @if ($breakpoint==tablet-lg) {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+
+    // 900px
+  }
+
+  @if ($breakpoint==desktop) {
+    @media only screen and (max-width: 62.5em) {
+      @content;
+    }
+
+    // 1000px
+  }
+
+  @if ($breakpoint==desktop-lg) {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+}
+
+// @include respond(desktop) {}
+// @include respond(tablet-lg) {}
+// @include respond(tablet) {}
+// @include respond(mobile) {}
+// @include respond(mobile-sm) {}
+
+@mixin container {
+  margin: 0 auto;
+  max-width: $container-width;
+}
+
+@mixin container-lg {
+  margin: 0 auto;
+  max-width: $container-width-lg;
+}
+
+@mixin container-sm {
+  margin: 0 auto;
+  max-width: $container-width-sm;
+}
+
+.section {
+  position: relative;
+  // padding: 22rem 2rem 40rem;
+  z-index: 1;
+
+  @include respond("desktop") {
+    padding: 16rem 2rem 32rem;
+  }
+
+  @include respond("tablet") {
+    padding: 10rem 2rem 24rem;
+  }
+
+  @include respond("mobile") {
+    padding: 5rem 2rem 20rem;
+  }
+
+  &::before {
+    --width: 110vw;
+    content: "";
+    position: absolute;
+    background-color: inherit;
+    height: 100%;
+    max-height: 92rem;
+    width: var(--width);
+    top: 0;
+    left: calc((var(--width) / -2) + 50%);
+    clip-path: ellipse(50% 14% at 50% 15%);
+    transform: translateY(-9.5%);
+    z-index: 2;
+
+    @include respond("desktop") {
+      --width: 120vw;
+    }
+
+    @include respond("tablet") {
+      --width: 140vw;
+    }
+
+    @include respond("mobile") {
+      --width: 165vw;
+    }
+  }
+
+  > * {
+    @include respond("mobile") {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+
+.faqs {
+  $faq-colors: $color-pink, $color-purple, $color-green, $color-brown,
+    $color-purple, $color-green;
+  // position: relative;
+  // margin: 13rem 0 -10rem;
+  width: 100%;
+  color: red;
+
+  @include respond("mobile") {
+    // margin: 7rem 0 -6rem;
+  }
+
+  &__faq {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    color: white;
+    padding: 4.5rem 10rem 30rem;
+    margin-top: 10vw;
+    border-top-left-radius: $radius-large;
+    border-top-right-radius: $radius-large;
+    box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.25);
+    transition: 0.73s $ease-out-expo;
+
+    // @include respond("tablet-lg") {
+    //   margin-top: 22rem;
+    // }
+
+    @include respond("tablet") {
+      padding: 4rem 3rem 30rem;
+      border-top-left-radius: 3.5rem;
+      border-top-right-radius: 3.5rem;
+      // margin-top: 22rem;
+    }
+
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        background-color: nth($faq-colors, $i);
+
+        @if $i == 1 or $i ==3 or $i == 6 {
+          color: black;
+        }
+      }
+    }
+
+    .h5 {
+      font-weight: normal;
+
+      @include respond("mobile") {
+        font-size: 1.6rem;
+      }
+    }
+
+    .p {
+      margin-top: 3rem;
+
+      @include respond("mobile") {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+      }
+    }
+
+    &-subheading {
+      display: block;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__support-link {
+    display: inline-block;
+    text-decoration: underline;
+    color: inherit;
+    margin-top: 10rem;
+
+    @include respond("mobile") {
+      margin-top: 3rem;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.container {
+  @include container;
+
+  &.lg {
+    @include container-lg;
+  }
+
+  &.sm {
+    @include container-sm;
+  }
+}
+
+.faqs__faq {
+  transition: transform 0.3s ease; /* Add this line for smooth transition */
+}
+
+.faqs__faq:nth-child(1):hover {
+  $increment: 100; // Set the increment value
+  @for $i from 2 through 5 {
+    & ~ .faqs__faq:nth-child(#{$i}) {
+      $translateY: 106px + ($increment * ($i - 1));
+      transform: translate(0px, #{$translateY}) !important;
+    }
+  }
+}
+
+.faqs__faq:nth-child(2):hover {
+  $increment: 100; // Set the increment value
+  @for $i from 3 through 5 {
+    & ~ .faqs__faq:nth-child(#{$i}) {
+      $translateY: 200px + ($increment * ($i - 1));
+      transform: translate(0px, #{$translateY}) !important;
+    }
+  }
+}
+
+.faqs__faq:nth-child(3):hover {
+  $increment: 100; // Set the increment value
+  @for $i from 4 through 5 {
+    & ~ .faqs__faq:nth-child(#{$i}) {
+      $translateY: 200px + ($increment * ($i - 1));
+      transform: translate(0px, #{$translateY}) !important;
+    }
+  }
+}
+
+.faqs__faq:nth-child(4):hover {
+  $increment: 100; // Set the increment value
+  @for $i from 5 through 5 {
+    & ~ .faqs__faq:nth-child(#{$i}) {
+      $translateY: 200px + ($increment * ($i - 1));
+      transform: translate(0px, #{$translateY}) !important;
+    }
+  }
+}

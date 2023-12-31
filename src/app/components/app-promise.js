@@ -7,7 +7,7 @@ import chat from '../../../public/chat.svg'
 
 const AppPromise = () => {
     return (
-        <div className="flex bg-violet-300 flex-col px-[16px] justify-center  items-center py-10">
+        <div className="flex bg-violet-300 flex-col px-[16px] justify-center  items-center py-10 ">
             <strong className="text-center mb-5 text-lime-950 text-2xl font-extrabold font-cabinet lg:text-5xl lg:leading-[60px] tracking-wide">
                 The Farmiz promise
             </strong>
